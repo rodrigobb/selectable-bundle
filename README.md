@@ -5,9 +5,10 @@ TO-DO List
 ---------
 
 * Clean dependencies (to make it real)
-* Reduce dependencies
+* MAKE TESTs
 * Define Interfaces
 * Use interfaces as contracts
+* Reduce dependencies
 * Make core part a library [rodrigobb/selectable](https://github.com/rodrigobb/selectable)
 * Remove SonataAdmin dependency (so build an alternative admin) 
 * Better translation system
