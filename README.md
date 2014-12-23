@@ -8,6 +8,7 @@ TO-DO List
 * Reduce dependencies
 * Define Interfaces
 * Use interfaces as contracts
+* Make core part a library [rodrigobb/selectable](https://github.com/rodrigobb/selectable)
 * Remove SonataAdmin dependency (so build an alternative admin) 
 * Better translation system
 * Remove doctrine dependency (or at least make it an option)
