@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="rbbusiness.selectable.class">RBBusiness\SelectableBundle\Service\Selectable</parameter>
+        <parameter key="rbbusiness.selectable.service_label">Selections</parameter>
+        <parameter key="rbbusiness.selectable.admin.group">Setup</parameter>
+    </parameters>
+
+    <services>
+        <service id="rbbusiness.selectable" class="%rbbusiness.selectable.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="request_stack" />
+            <argument>%locale%</argument>
+            <!--argument>plain_value</argument-->
+            <!--argument>%parameter_name%</argument-->
+        </service>
+
+        <service id="rbbusiness.twig.selectable_extension" class="RBBusiness\SelectableBundle\Twig\SelectableExtension">
+            <argument type="service" id="rbbusiness.selectable" />
+            <tag name="twig.extension" />
+        </service>
+
+      <service id="rbbusiness.selectable.admin" class="RBBusiness\SelectableBundle\Admin\SelectionAdmin">
+        <tag name="sonata.admin" manager_type="orm" group="%rbbusiness.selectable.admin.group%" label="%rbbusiness.selectable.service_label%"/>
+        <argument />
+        <argument>RBBusiness\SelectableBundle\Entity\Selection</argument>
+        <argument />
+        <call method="setTranslationDomain">
+            <argument>RBBusinessSelectableBundle</argument>
+        </call>
+      </service>
+
+    </services>
+</container>

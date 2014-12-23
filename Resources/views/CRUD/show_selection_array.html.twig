@@ -1,0 +1,14 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+{% block field %}
+    <ul>
+    {% for key, val in value %}
+    {% if field_description.options.sel_key is defined %}
+        <li>{{ val | selection ( field_description.options.sel_key ) }}</li>
+    {% else %}
+        <li>{{ val | selection ( field_description.options.code ) }}</li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}

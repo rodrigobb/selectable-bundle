@@ -1,0 +1,11 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+{% block field %}
+{%- if value is empty -%}
+    &nbsp;
+{%- elseif field_description.options.sel_key is defined -%}
+    {{ value | selection ( field_description.options.sel_key ) }}
+{%- else -%}
+	{{ value | selection ( field_description.options.code ) }}
+{%- endif -%}
+{% endblock %}

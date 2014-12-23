@@ -1,0 +1,9 @@
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+{% if field_description.options.sel_key is defined %}
+    {{ value | selection ( field_description.options.sel_key ) }}
+{% else %}
+	{{ value | selection ( field_description.options.code ) }}
+{% endif %}
+{% endblock %}

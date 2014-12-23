@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="RBBusinessSelectableBundle.en.xliff">
+        <body>
+            <trans-unit id="sel_key">
+                <source>Sel Key</source>
+                <target>Categoría</target>
+            </trans-unit>
+            <trans-unit id="sel_value">
+                <source>Sel Value</source>
+                <target>Valor</target>
+            </trans-unit>
+            <trans-unit id="sel_label">
+                <source>Sel Label</source>
+                <target>Texto a mostrar</target>
+            </trans-unit>
+            <trans-unit id="sel_description">
+                <source>Description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="sel_locale">
+                <source>Locale</source>
+                <target>Idioma asociado</target>
+            </trans-unit>
+            <trans-unit id="sel_idx">
+                <source>Idx</source>
+                <target>Orden</target>
+            </trans-unit>
+          </body>
+    </file>
+</xliff>
