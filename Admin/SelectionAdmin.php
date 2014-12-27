@@ -25,9 +25,9 @@ class SelectionAdmin extends Admin
     {
 		parent::initialize();
 		$this->selections = $this->getConfigurationPool()->getContainer()->get('rbbusiness.selectable');
-    		
-            $this->locales = $this->getConfigurationPool()->getContainer()->getParameter('available_languages');
-            $this->locales = array_combine( $this->locales, $this->locales);
+
+        $this->locales = $this->getConfigurationPool()->getContainer()->getParameter('available_languages');
+        $this->locales = array_combine( $this->locales, $this->locales);
 	}
 
     protected function configureFormFields(FormMapper $formMapper)
@@ -50,21 +50,15 @@ class SelectionAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('sel_key',             'doctrine_orm_choice', array(), 
-                                'choice' , array('choices' => $this->selections->getKeys()))
-            ->add('locale',                'doctrine_orm_choice', array(), 
-                                'choice' , array('choices' => $this->locales))
+            ->add('sel_key', 'doctrine_orm_choice', array(), 
+                             'choice' , array('choices' => $this->selections->getKeys()))
+            ->add('locale',  'doctrine_orm_choice', array(), 
+                             'choice' , array('choices' => $this->locales))
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-//        $fields = $this->getExportFields();
-//
-//        foreach ($fields as $field) {
-//            $listMapper->add($field);
-//        }
-
         $listMapper
             ->add('sel_key')
             ->add('sel_value')
