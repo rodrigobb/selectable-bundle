@@ -1,6 +1,25 @@
 selectable-bundle
 =================
 
+Install
+-------
+
+Before this bundle be in packagist you have to add the following lines to your project's composer.json
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rodrigobb/selectable-bundle"
+        }
+    ],
+    "require": {
+        "rbbusiness/selectable-bundle": "master"
+    }
+}
+```
+
 TO-DO List
 ---------
 
