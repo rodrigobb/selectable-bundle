@@ -20,6 +20,8 @@ Before this bundle be in packagist you have to add the following lines to your p
 }
 ```
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/4ca57fd1-aaf1-44db-955d-43f19cd102ad/big.png)](https://insight.sensiolabs.com/projects/4ca57fd1-aaf1-44db-955d-43f19cd102ad)
+
 TO-DO List
 ---------
 
